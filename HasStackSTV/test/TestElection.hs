@@ -8,7 +8,8 @@ electionTests :: Test
 electionTests = TestLabel "All Tests for Election" $ TestList
     [combineBehaviour
     , combineMultipleVotes
-    , quotaTests]
+    , quotaTests
+    ]
 
 combineBehaviour :: Test
 combineBehaviour = TestLabel "Combine Votes" $ TestList [

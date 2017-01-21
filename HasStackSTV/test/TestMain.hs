@@ -2,12 +2,13 @@ module Main (
     main
 ) where
 
-import Test.Hspec
+import Test.Hspec (hspec, describe)
 import Test.Hspec.Contrib.HUnit (fromHUnitTest)
-import Test.HUnit
+import Test.HUnit (Test(TestList))
 import TestVote
 import TestElection
 import TestCandidate
+import TestDData
 
 testCases :: Test
 testCases =
@@ -16,6 +17,7 @@ testCases =
         , electionTests
         , candidateOrdering
         , basicTricklePreference
+        , dataTests
     ]
 
 main :: IO()
